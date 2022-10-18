@@ -1,0 +1,29 @@
+directories:
+  output: ./dist/
+  buildResources: ./build/
+productName: nftIme
+appId: com.electron.nftime
+asar: true
+mac:
+  target:
+    - default
+  icon: dist/nftime_logo.png
+dmg:
+  title: nftIme
+  icon: dist/nftime_logo.png
+win:
+  target:
+    - nsis
+  icon: build/icons/icon.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: false
+  createDesktopShortcut: true
+  perMachine: true
+  language: '1042'
+  installerIcon: build/icons/icon.ico
+  shortcutName: NB
+  artifactName: NB-${version}.${ext}
+  uninstallDisplayName: NB
+files: []
+electronVersion: 20.1.0
